@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style/globale.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- google fonts icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Test NEXTGROWTH</title>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>date de création</th>
+                                <th class="status">etat</th>
+                                <th>nom</th>
+                                <th>prénom</th>
+                                <th>nom d'utilisateur</th>
+                                <th>matricule</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-data">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="add-user">
+                    <div class="add-user-action">
+                        <button id="add-user-open" onclick="openModal(false)">ajouter utilisateur</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <section class="modal" id="modal">
+        <div class="row">
+            <div class="header">
+                <h3>ajout d'utilisateurs</h3>
+                <button class="close-modal" onclick="openModal(true)">X</button>
+            </div>
+            <div class="add-user">
+                <form name="addUserForm">
+                    <div class="form-group">
+                        <label for="lastName">nom</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">prénom</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">etat</label>
+                        <input type="text" name="status" id="status" placeholder="" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userName">nom d'utilisteur</label>
+                        <input type="text" name="userName" id="userName" placeholder="" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="createdDate">date de création</label>
+                        <input type="text" name="createdDate" id="createdDate" placeholder="" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="registrationNumber">matricule</label>
+                        <input type="text" name="registrationNumber" id="registrationNumber" maxlength="4" placeholder="" autocomplete="off">
+                    </div>
+                </form>
+                <div class="add-user-action">
+                    <button type="submit" onclick="return validateForm()">enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/source.js"></script>
+
+</body>
+
+</html>

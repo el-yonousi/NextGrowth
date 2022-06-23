@@ -1,0 +1,29 @@
+:root {
+    --valide: #5BE881;
+    --rejected: #FF0000;
+    --on-validation: #FDB64D;
+    --bg: #fdfdfd;
+}
+
+
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* google fonts icons */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.add-user-action button {
+    width: fit-content;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    border: 0;
+    background-color: var(--on-validation);
+    float: right;
+    cursor: pointer;
+    text-transform: capitalize;
+}
